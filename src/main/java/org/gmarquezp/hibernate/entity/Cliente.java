@@ -20,6 +20,12 @@ public class Cliente {
     public Cliente() {
     }
 
+    // Constructor para usarclo con HQL
+    public Cliente(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     public Long getId() {
         return id;
     }
