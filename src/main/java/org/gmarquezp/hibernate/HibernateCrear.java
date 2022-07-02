@@ -16,7 +16,7 @@ public class HibernateCrear {
 
             // crea un nuevo cliente
             Cliente cliente = new Cliente();
-            cliente.setNombre("Gustavo");
+            cliente.setNombre("Sergio");
             cliente.setApellido("Marquez");
             cliente.setFormaPago("Tarjeta de crédito");
 

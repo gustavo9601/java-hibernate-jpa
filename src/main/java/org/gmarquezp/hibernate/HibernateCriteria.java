@@ -206,13 +206,12 @@ public class HibernateCriteria {
 
         registro = entityManager.createQuery(queryObject).getSingleResult();
 
-        count = (Long)registro[0];
+        count = (Long) registro[0];
         sum = (Long) registro[1];
         max = (Long) registro[2];
         min = (Long) registro[3];
 
         System.out.println("count=" + count + ", sum=" + sum + ", max=" + max + ", min=" + min);
-
 
 
         entityManager.close();

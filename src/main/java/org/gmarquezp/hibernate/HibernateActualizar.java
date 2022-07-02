@@ -12,9 +12,9 @@ public class HibernateActualizar {
             entityManager.getTransaction().begin();
 
             // crea un nuevo cliente
-            Cliente cliente = entityManager.find(Cliente.class, 1L);
+            Cliente cliente = entityManager.find(Cliente.class, 14L);
             System.out.println("cliente antes=\t" + cliente);
-            cliente.setApellido("Marquez sEl mas Paaaaros");
+            cliente.setApellido("Marquez el mas pro del mundo mundiañ");
 
             // actualiza el cliente en la base de datos
             entityManager.merge(cliente);
