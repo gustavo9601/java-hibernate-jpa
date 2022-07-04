@@ -1,9 +1,6 @@
 package org.gmarquezp.hibernate.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
@@ -55,4 +52,10 @@ public class Auditoria {
         System.out.println("Inicializar algo justo antes de actualizar");
         this.actualizadoEn = LocalDateTime.now();
     }
+
+    @PreRemove
+    public void preRemove() {
+        System.out.println("Inicializar algo justo antes de eliminar");
+    }
+
 }
