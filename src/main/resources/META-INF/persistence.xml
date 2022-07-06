@@ -28,7 +28,7 @@
 
 
             <!--Si existe en resources import.sql // importara los datos despues de crear las entidades-->
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!--<property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>-->
         </properties>
     </persistence-unit>
 </persistence>

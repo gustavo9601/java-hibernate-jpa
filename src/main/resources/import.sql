@@ -1,4 +1,4 @@
-/*Alumnos*/
+/*Alumnos
 INSERT INTO alumnos
     ( apellido, nombre)
 VALUES ( 'Perez', 'Juan');
@@ -32,3 +32,6 @@ VALUES (3, 2);
 INSERT INTO alumnos_cursos
     (alumno_id, curso_id)
 VALUES (4, 1);
+*/
+
+INSERT INTO clientes ( apellido, actualizado_en, creado_en, forma_pago, nombre, cliente_detalle_id) VALUES( 'Perez', '2022-07-05 21:08:22.665', '2022-07-05 21:08:22.665', 'Efectivo', 'Oscar', NULL);

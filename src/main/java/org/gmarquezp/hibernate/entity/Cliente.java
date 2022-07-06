@@ -35,19 +35,21 @@ public class Cliente {
      * */
 
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Direccion> direcciones;
 
 
     // Relacion inverza, un cliente a muchas facturas
     // mappedBy = "cliente" // indica que la relacion es inversa, es decir, que la direccion es la clave foranea de la tabla intermedia
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cliente")
+    // fetch = FetchType.LAZY //  no se cargara la relacion hasta que se indica o se imprima
+    // fetch = FetchType.EAGER // se cargara la relacion siempre que se llame el modelo
+    @OneToMany(fetch = FetchType.LAZY,  cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "cliente")
     private List<Factura> facturas;
 
 
 
     // Relacion Uno a uno
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "cliente_detalle_id") // indica el nombre de la columna en la tabla
     private ClienteDetalle clienteDetalle;
 
