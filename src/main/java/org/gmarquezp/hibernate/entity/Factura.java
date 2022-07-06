@@ -16,7 +16,7 @@ public class Factura {
 
 
     // Muchas facturas para un cliente
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id") // indica el nombre de la columna en la tabla
     private Cliente cliente; // si no se especifica el column, tomara atributo_id // cliente_id
 
